@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Login Validations(failed)" verbose="0">
+    <classes>
+      <class name="org.Test.LoginPageErrorValidation">
+        <methods>
+          <include name="teardown"/>
+          <include name="launchApplication"/>
+          <include name="PasswordFieldValidation"/>
+          <include name="UserPassValidation"/>
+        </methods>
+      </class> <!-- org.Test.LoginPageErrorValidation -->
+    </classes>
+  </test> <!-- Login Validations(failed) -->
+  <test thread-count="5" name="LoginPage(failed)" verbose="0">
+    <classes>
+      <class name="org.Test.LoginPage">
+        <methods>
+          <include name="teardown"/>
+          <include name="newOrder"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- org.Test.LoginPage -->
+    </classes>
+  </test> <!-- LoginPage(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

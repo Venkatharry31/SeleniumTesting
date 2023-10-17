@@ -1,0 +1,6 @@
+org\Abstractcomponents\AbstractComponents.class
+org\pageobjects\ProductCatalog.class
+org\pageobjects\LandingPage.class
+org\pageobjects\PaymentPage.class
+org\pageobjects\CartPage.class
+org\pageobjects\CheckOut.class
