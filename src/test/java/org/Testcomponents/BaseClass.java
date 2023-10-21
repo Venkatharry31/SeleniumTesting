@@ -16,7 +16,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.*;
 import java.time.Duration;
+import java.util.Locale;
 import java.util.Properties;
+import java.util.ResourceBundle;
 
 public class BaseClass {
     public WebDriver driver;
@@ -69,10 +71,7 @@ public class BaseClass {
         String host = "localhost";
         String port = "3306";
         String[] creds = new String[2];
-        //String username;
-        //String password;
-        //creds[0] = username;
-        //creds[1] = password;
+
 
         Connection con = DriverManager.getConnection("jdbc:mysql://"+host+":"+port+"/seleniumautomation","root","Appu@100");
         Statement s1 = con.createStatement();
@@ -87,6 +86,11 @@ public class BaseClass {
                    }
         return creds;
 
+    }
+// to get data from properties file
+    public static ResourceBundle getUserCred(){
+        ResourceBundle info =  ResourceBundle.getBundle("ndata");
+        return info;
     }
 
     @AfterMethod(alwaysRun = true)
